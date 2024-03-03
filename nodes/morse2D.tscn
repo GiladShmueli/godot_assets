@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://hso8aqp0r17m"]
+
+[ext_resource type="Script" path="res://code/Morse2D.gd" id="1_cfiby"]
+[ext_resource type="AudioStream" uid="uid://dre424rrtscsm" path="res://sounds/bleep.mp3" id="2_a1y0i"]
+[ext_resource type="Script" path="res://code/CharsMap.gd" id="3_1nnkg"]
+
+[node name="Morse2D" type="Node2D"]
+script = ExtResource("1_cfiby")
+
+[node name="AudioBeep2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_a1y0i")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 80.0
+offset_bottom = 60.0
+text = "PLAY"
+
+[node name="MorseTimer" type="Timer" parent="."]
+
+[node name="CharsMap" type="Node" parent="."]
+script = ExtResource("3_1nnkg")

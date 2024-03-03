@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfb4iecdpy7d7"]
+
+[ext_resource type="Script" path="res://code/Dice.gd" id="1_4bs7l"]
+[ext_resource type="Texture2D" uid="uid://d0uea5bmr6hc8" path="res://images/dice_1.png" id="2_wkfeo"]
+
+[node name="Dice" type="Node2D"]
+script = ExtResource("1_4bs7l")
+
+[node name="SideUp" type="Sprite2D" parent="."]
+texture = ExtResource("2_wkfeo")

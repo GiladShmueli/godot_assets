@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpl1aqet1pprf"]
+[gd_scene load_steps=4 format=3 uid="uid://bpl1aqet1pprf"]
 
 [ext_resource type="PackedScene" uid="uid://bfb4iecdpy7d7" path="res://nodes/dice.tscn" id="1_f3tgg"]
+[ext_resource type="Script" path="res://code/fortuneWheel.gd" id="1_tc1sh"]
 [ext_resource type="PackedScene" uid="uid://hso8aqp0r17m" path="res://nodes/morse2D.tscn" id="2_juu2h"]
 
 [node name="GameFrame" type="Node2D"]
+scale = Vector2(10, 10)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(30, 40)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_tc1sh")
 
 [node name="Dice" parent="." instance=ExtResource("1_f3tgg")]
+visible = false
 position = Vector2(499, 252)
 
 [node name="Morse2D" parent="." instance=ExtResource("2_juu2h")]
+visible = false
 position = Vector2(133, 142)
